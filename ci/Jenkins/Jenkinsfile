@@ -21,8 +21,8 @@ pipeline {
         SONAR_URL = "http://localhost:9000"
       }
       steps {
-        withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-          sh 'cd demo-java-app && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
+        withCredentials([string(credentialsId: 'sonarqube', variable: 'squ_0db85da8a888a90d2a5de366dab9abe90a269169')]) {
+          sh 'cd demo-java-app && mvn sonar:sonar -Dsonar.login=squ_0db85da8a888a90d2a5de366dab9abe90a269169 -Dsonar.host.url=${SONAR_URL}'
         }
       }
     }
